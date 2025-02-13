@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Love Printing</title>
+    <style>
+        body {
+            background-color: red; /* Red background */
+            color: black; /* Black text */
+            font-family: Arial,sans sherif;
+            text-align: center;
+            font-size: 25px; /* Bigger text */
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        #output {
+            font-size: 25px; /* Increase text size */
+        }
+    </style>
+</head>
+<body>
+    <div id="output"></div> <!-- Container for text -->
+
+    <script>
+        let i = 1;
+        let outputDiv = document.getElementById("output");
+
+        let interval = setInterval(function () {
+            let newLine = document.createElement("p"); // Create a new <p> tag
+            newLine.textContent = "HAPPY VALENTINE SENIOR KUTTY ❤️"; // Set the text
+            outputDiv.appendChild(newLine); // Append to output div
+            i++;
+            if (i > 10000) {
+                clearInterval(interval); // Stop after 100 prints
+            }
+        }, 1.0); // 1.0-second delay
+    </script>
+</body>
+</html>
